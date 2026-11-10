@@ -1,16 +1,57 @@
 PROYECTO DTM - ESTRUCTURA DE TRABAJO
 
-Estructura basada de forma simplificada en Cookiecutter Data Science (CCDS), una convención/template para organizar proyectos de Data Science de manera clara y reproducible.
+La estructura del proyecto está basada de forma simplificada en Cookiecutter Data Science (CCDS), utilizando una organización clara y reproducible para separar los datos, el análisis, los modelos y el código del proyecto.
 
-data/raw/       -> Datos originales sin modificar; acá va DATASET_DTM.csv.
-data/processed/ -> Datos ya limpiados, transformados y preparados para entrenar modelos.
-notebooks/      -> Notebooks Jupyter (.ipynb) para exploración, pruebas, análisis y experimentación.
-src/            -> Código Python reutilizable/definitivo para limpieza, preparación, entrenamiento y predicción.
-models/         -> Modelos entrenados guardados y, si corresponde, resultados asociados al modelo.
 
-Archivos que agregaremos en la raíz:
-README.md       -> Explica qué hace el proyecto y cómo usarlo.
-environment.yml -> Define Python y las dependencias necesarias para reproducir el entorno con Conda.
-.gitignore      -> Indica a Git qué archivos o carpetas no deben versionarse.
+ESTRUCTURA
 
-Nota: Cookiecutter Data Science es una estructura/template con convenciones de organización para proyectos de Data Science.
+data/
+    raw/
+        Contiene los datos originales sin modificar.
+        - dataset_registro_fallas_x_mes_CAMIONES.csv
+
+    processed/
+        Contiene los datos luego de las etapas de limpieza, transformación y feature engineering.
+        - dataset_registro_fallas_x_mes_CAMIONES_PROCESADO.csv
+
+
+notebooks/
+    Contiene el desarrollo y análisis del proyecto mediante Jupyter Notebooks.
+
+    01_AED_mantenimiento_predictivo_CAMIONES.ipynb
+        Análisis exploratorio de datos (AED), limpieza y preparación inicial.
+
+    02_Modelo_Supervisado_CAMIONES.ipynb
+        Desarrollo y evaluación del modelo de Machine Learning supervisado para mantenimiento.
+
+    03_Modelo_No_Supervisado_CAMIONES.ipynb
+        Análisis no supervisado mediante clustering con K-Means, evaluación de clusters y mejora del modelo.
+
+    logs/
+        Salidas auxiliares generadas durante las pruebas y análisis.
+
+
+models/
+    Carpeta destinada a almacenar modelos entrenados y otros artefactos asociados al entrenamiento.
+
+
+src/
+    Código Python reutilizable o definitivo para tareas de preparación de datos, entrenamiento y predicción.
+
+
+ARCHIVOS DE LA RAÍZ
+
+README.md
+    Descripción general del proyecto, dataset utilizado, objetivo, principales hallazgos y modelos desarrollados.
+
+.gitignore
+    Define los archivos y carpetas que Git no debe versionar.
+
+environment.yml
+    Define el entorno de Python y las dependencias necesarias para reproducir el proyecto.
+
+
+NOTA
+
+Cookiecutter Data Science es una estructura de referencia para organizar proyectos de Data Science.
+En este proyecto se utiliza una versión simplificada y adaptada al alcance del trabajo final.
